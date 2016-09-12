@@ -1,4 +1,7 @@
 class Philosopher < ApplicationRecord
+  geocoded_by :address
+after_validation :geocode
+
   has_many :upvotes
   has_many :downvotes
   has_many :works
