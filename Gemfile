@@ -29,6 +29,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'materialize-sass'
 gem 'geocoder'
 gem 'gmaps4rails'
+gem 'clearance'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
