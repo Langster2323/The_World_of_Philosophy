@@ -17,5 +17,17 @@
         <th>Wikipedia</th>
       </tr>
     </thead>
+
+    <tbody>
+      <%= content_tag_for(:tr, @philosophers) do |philosopher| %>
+        <td><%= philosopher.latitude %></td>
+        <td><%= philosopher.longitude %></td>
+        <td><%= philosopher.address %></td>
+        <td><%= philosopher.name %></td>
+        <td><%= philosopher.born %> </td>
+        <td><%= philosopher.concentration %></td>
+        <td><%= philosopher.wikipedia %></td>
+      <% end %>
+    </tbody>
   </table>
 </div>
