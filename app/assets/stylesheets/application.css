@@ -15,3 +15,19 @@
  */
 
  @import "materialize";
+/*Dashboard*/
+
+ .file-card {
+  border: solid 0.1em $card-border;
+  &:hover {
+    box-shadow: 5px 5px 5px gray;
+  }
+
+  .card-content-index {
+    padding: 10px;
+    word-wrap: break-word;
+    .card-title-index {
+      margin: 0;
+      font-size: 2rem;
+    }
+  }
