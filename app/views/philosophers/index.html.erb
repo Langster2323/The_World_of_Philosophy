@@ -40,7 +40,32 @@
 </div>
 <script type="text/javascript">
 handler = Gmaps.build('Google');
-handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
+handler.buildMap({ provider: {styles: [
+  {
+    "featureType": "landscape",
+    "elementType": "geometry.fill",
+    "stylers": [
+      { "hue": "#003bff" },
+      { "gamma": 0.78 },
+      { "saturation": 46 },
+      { "lightness": -68 }
+    ]
+  },{
+    "featureType": "poi",
+    "elementType": "geometry.fill",
+    "stylers": [
+      { "saturation": -43 },
+      { "lightness": -23 }
+    ]
+  },{
+    "featureType": "road",
+    "elementType": "geometry.fill",
+    "stylers": [
+      { "hue": "#ff0000" }
+    ]
+  },{
+  }
+]}, internal: {id: 'map'}}, function(){
   markers = handler.addMarkers(<%=raw @hash.to_json %>);
   handler.bounds.extendWith(markers);
   handler.fitMapToBounds();

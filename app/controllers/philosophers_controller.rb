@@ -4,6 +4,7 @@ def index
     @hash = Gmaps4rails.build_markers(@philosophers) do |philosopher, marker|
   marker.lat philosopher.latitude
   marker.lng philosopher.longitude
+  marker.infowindow philosopher.wikipedia
   end
 end
 
