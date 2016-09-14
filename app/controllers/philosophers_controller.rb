@@ -1,9 +1,11 @@
 class PhilosophersController < ApplicationController
-  def index
-    render locals: {
-      philosophers: Philosopher.all
-    }
+def index
+    @philosophers = Philosopher.all
+    @hash = Gmaps4rails.build_markers(@philosophers) do |philosopher, marker|
+  marker.lat philosopher.latitude
+  marker.lng philosopher.longitude
   end
+end
 
   def show
     if Philosopher.exists?(params[:id])
