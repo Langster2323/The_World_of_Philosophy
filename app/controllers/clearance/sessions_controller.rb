@@ -43,7 +43,7 @@ class Clearance::SessionsController < Clearance::BaseController
 
   def redirect_signed_in_users
     if signed_in?
-      redirect_to url_for_signed_in_users
+      redirect_to philosopher
     end
   end
 
