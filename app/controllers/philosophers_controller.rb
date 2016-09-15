@@ -1,4 +1,6 @@
 class PhilosophersController < ApplicationController
+  before_action :require_login
+
 def index
     @philosophers = Philosopher.all
     @hash = Gmaps4rails.build_markers(@philosophers) do |philosopher, marker|
