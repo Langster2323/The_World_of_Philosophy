@@ -55,7 +55,7 @@ development:
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
-test:
+test: &test
   <<: *default
   database: The_World_of_Philosophy_test
 
@@ -83,3 +83,6 @@ production:
   database: The_World_of_Philosophy_production
   username: The_World_of_Philosophy
   password: <%= ENV['THE_WORLD_OF_PHILOSOPHY_DATABASE_PASSWORD'] %>
+
+cucumber:
+  <<: *test
