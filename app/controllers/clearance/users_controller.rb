@@ -9,23 +9,9 @@ class Clearance::UsersController < Clearance::BaseController
     skip_before_filter :authorize, only: [:create, :new], raise: false
   end
 
-  def index
-    users = User.all.order(:name)
-    render template: 'users/index.html.erb', locals: { users: users }
-  end
-
-  def show
-    user = User.find(params.fetch(:id))
-    if user
-      render template: 'users/show.html.erb', locals: { user: user }
-    else
-      redirect_to users
-    end
-  end
-
   def new
     if signed_in?
-      redirect_to "/users"
+      redirect_to "/"
     else
       @user = user_from_params
       render template: "users/new.html.erb"
@@ -70,12 +56,12 @@ class Clearance::UsersController < Clearance::BaseController
 
   def redirect_signed_in_users
     if signed_in?
-      redirect_to "/users"
+      redirect_to "/"
     end
   end
 
   def url_after_create
-    redirect_to "/users"
+    redirect_to "/"
   end
 
   def user_from_params

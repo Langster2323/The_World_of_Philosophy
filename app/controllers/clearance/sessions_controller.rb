@@ -22,7 +22,7 @@ class Clearance::SessionsController < Clearance::BaseController
 
     sign_in(@user) do |status|
       if status.success?
-        redirect_to root_path
+        redirect_to philosopher
       else
         flash.now.notice = status.failure_message
         render template: "sessions/new", status: :unauthorized
