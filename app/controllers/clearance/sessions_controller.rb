@@ -10,8 +10,7 @@ class Clearance::SessionsController < Clearance::BaseController
   end
 
   def create
-    
-
+    @user = authenticate(params)
     sign_in(@user) do |status|
       if status.success?
         redirect_to root_path
@@ -35,7 +34,7 @@ class Clearance::SessionsController < Clearance::BaseController
 
   def redirect_signed_in_users
     if signed_in?
-      redirect_to root_path
+      redirect_to url_for_signed_in_users
     end
   end
 
