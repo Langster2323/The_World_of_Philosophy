@@ -1,5 +1,5 @@
 language: ruby
-script:
-  - rake db:create db:migrate db:test:prepare cucumber
 rvm:
-  - 2.2.1
+  - 2.2
+  - jruby
+  - rbx-2
