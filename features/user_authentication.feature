@@ -1,12 +1,14 @@
 Feature: As a User, In order to use the app, I would like to be able to login
 
+Background: A User logs in
+  Given I have an existing Philosopher
+  When I visit "/sign_in"
+  And I fill in "Email" with "user@example.com"
+  And I fill in "Password" with "password"
+  And I press "Submit"
 
-  Scenario: Existing User Logs In
-    Given I have an existing user account
-    When I visit "/sign_in"
-    And I fill in "Email" with "user@example.com"
-    And I fill in "Password" with "password"
-    And I press "Submit"
-    Then I should see "Create Note"
+  Scenario: First thing user sees after logging in
+    Then I should see "Listing Philosophers"
 
-  Scenario: User Without an Account Signs Up
+  Scenario: User clicks something
+    And I click "link"
