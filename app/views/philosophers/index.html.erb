@@ -1,13 +1,14 @@
 
 <div>
-  <h1>Listing Philosophers</h1>
+  <h1>The World Of Philosophy</h1>
+  <h3>Listing Philosophers</h3>
 </div>
 <div class="row">
   <div class="card file-card col m8 m2">
     <div class="card-content">
-      <table>
+      <table class="responsive-table">
         <thead>
-          <tr>
+          <tr class="flow-text">
             <th>Latitude</th>
             <th>Longitude</th>
             <th>Address</th>
@@ -20,7 +21,7 @@
 
         <tbody>
           <% @philosophers.each do |philosopher| %>
-            <tr>
+            <tr class="flow-text">
               <td><%= philosopher.latitude %></td>
               <td><%= philosopher.longitude %></td>
               <td><%= philosopher.address %></td>
