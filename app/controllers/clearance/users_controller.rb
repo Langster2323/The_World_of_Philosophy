@@ -9,6 +9,15 @@ class Clearance::UsersController < Clearance::BaseController
     skip_before_filter :authorize, only: [:create, :new], raise: false
   end
 
+  def show
+    user = User.find(params.fetch(:id))
+    if user
+      render template: 'users/show.html.erb', locals: { user: user }
+    else
+      redirect_to users
+    end
+  end
+
   def new
     if signed_in?
       redirect_to "/"
