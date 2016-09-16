@@ -31,3 +31,15 @@
       font-size: 2rem;
     }
   }
+
+  .sign-in-out-up {
+  display: inline-flex;
+  top: 10px;
+  position: relative;
+  .welcome {
+    display: table;
+    position: relative;
+    bottom: 5px;
+    right: 20px;
+  }
+}

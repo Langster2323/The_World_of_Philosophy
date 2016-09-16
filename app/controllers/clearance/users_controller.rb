@@ -18,7 +18,7 @@ class Clearance::UsersController < Clearance::BaseController
     end
   end
 
-  def create
+  def create(user_params)
     @user = user_from_params
     if @user.save
       sign_in @user

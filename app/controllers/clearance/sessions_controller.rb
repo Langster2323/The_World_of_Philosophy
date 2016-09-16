@@ -1,20 +1,12 @@
 class Clearance::SessionsController < Clearance::BaseController
   if respond_to?(:before_action)
     before_action :redirect_signed_in_users, only: [:new]
-    skip_before_action :require_login,
-      only: [:create, :new, :destroy],
-      raise: false
-    skip_before_action :authorize,
-      only: [:create, :new, :destroy],
-      raise: false
+    skip_before_action :require_login, only: [:create, :new, :destroy], raise: false
+    skip_before_action :authorize, only: [:create, :new, :destroy], raise: false
   else
     before_filter :redirect_signed_in_users, only: [:new]
-    skip_before_filter :require_login,
-      only: [:create, :new, :destroy],
-      raise: false
-    skip_before_filter :authorize,
-      only: [:create, :new, :destroy],
-      raise: false
+    skip_before_filter :require_login, only: [:create, :new, :destroy], raise: false
+    skip_before_filter :authorize, only: [:create, :new, :destroy], raise: false
   end
 
   def create
@@ -22,10 +14,10 @@ class Clearance::SessionsController < Clearance::BaseController
 
     sign_in(@user) do |status|
       if status.success?
-        redirect_to philosopher
+        redirect_to root_path
       else
         flash.now.notice = status.failure_message
-        render template: "sessions/new", status: :unauthorized
+        render template: "sessions/new.html.erb", status: :unauthorized
       end
     end
   end
@@ -36,14 +28,14 @@ class Clearance::SessionsController < Clearance::BaseController
   end
 
   def new
-    render template: "sessions/new"
+    render template: "sessions/new.html.erb"
   end
 
   private
 
   def redirect_signed_in_users
     if signed_in?
-      redirect_to url_for_signed_in_users
+      redirect_to root_path
     end
   end
 

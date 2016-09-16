@@ -1,17 +1,16 @@
-<%= form_for :session, url: session_path do |form| %>
-
+<%= form_tag("/session", method: "post") do %>
   <div class="text-field">
-    <%= form.label :email %>
-    <%= form.text_field :email, type: 'email' %>
+    <%= label_tag(:email, "email:") %>
+    <%= text_field_tag(:email) %>
   </div>
 
   <div class="password-field">
-    <%= form.label :password %>
-    <%= form.password_field :password %>
+    <%= label_tag(:password, "password:") %>
+    <%= text_field_tag(:password) %>
   </div>
 
   <div class="submit-field">
-    <%= form.submit "Submit", class: "waves-effect waves-light btn sign-in" %>
+    <%= submit_tag("Submit") %>
   </div>
 
   <div class="other-links">
