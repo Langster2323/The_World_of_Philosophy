@@ -1,24 +1,9 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+THE WORLD OF PHILOSOPHY
 
-Things you may want to cover:
+Visit my https://the-world-of-philosophy-app.herokuapp.com/sign_in to receive a philosophical experience!
+The world of philosophy is a one page educational app, that exploits its user to world unrecongized nor acknowledge today. This application is geared towards those who are passionate about philosophy and are eager to learn more than what they currently do. This app is also used for students to stay engaged.
 
-* Ruby version
+This applications database holds philosophers from 2500 years ago to present, users will get to experience the minds of the most deepest and critical thinkers in the world. This application represents philosophers from around the globe starting from, North America (Including Native American Philosophers), Europe, Asia, and soon to come Africa, South America and Australia.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Libraries and Technologies - Clearance for Authentication, Google Maps api, JavaScript dependencies, Cucumber, Ruby 2.3, Rails 5.0.

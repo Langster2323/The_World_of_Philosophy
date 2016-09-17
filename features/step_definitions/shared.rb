@@ -46,5 +46,5 @@ Given(/^I am on the homepage$/) do
 end
 
 Then(/^I should see a pin on the map$/) do
-  expect(page).to have_selector('#markers img', count: 1)
+  expect(page).to have_selector('#markers', count: 1)
 end
