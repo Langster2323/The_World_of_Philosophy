@@ -6,4 +6,4 @@ The world of philosophy is a one page educational app, that exploits its user to
 
 This applications database holds philosophers from 2500 years ago to present, users will get to experience the minds of the most deepest and critical thinkers in the world. This application represents philosophers from around the globe starting from, North America (Including Native American Philosophers), Europe, Asia, and soon to come Africa, South America and Australia.
 
-Libraries and Technologies - Clearance for Authentication, Google Maps api, JavaScript dependencies, Cucumber, Ruby 2.3, Rails 5.0.
+Libraries and Technologies - Clearance for Authentication, Google Maps api, JavaScript dependencies, Cucumber, Ruby 2.3, Rails 5.0., Trello https://trello.com/b/8VmCoYkW/final-project, 
