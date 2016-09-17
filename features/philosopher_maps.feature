@@ -1,3 +1,4 @@
+@JavaScript
 Feature: Maps pin
 
   Scenario: User sees one pin on the map
