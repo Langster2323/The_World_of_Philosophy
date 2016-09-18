@@ -34,6 +34,7 @@ gem 'gmaps4rails'
 gem 'clearance'
 gem "codeclimate-test-reporter", group: :test, require: nil
 
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
