@@ -48,3 +48,11 @@ end
 Then(/^I should see a pin on the map$/) do
   expect(page).to have_selector('#markers', count: 1)
 end
+
+Given(/^I have an existing user account$/) do
+  own password and email
+end
+
+Given(/^I am currently logged in$/) do
+  visit root_path
+end
