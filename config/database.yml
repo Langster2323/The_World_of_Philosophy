@@ -80,9 +80,7 @@ test: &test
 #
 production:
   <<: *default
-  database: The_World_of_Philosophy_production
-  username: The_World_of_Philosophy
-  password: <%= ENV['THE_WORLD_OF_PHILOSOPHY_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
 
 cucumber:
   <<: *test
