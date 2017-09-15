@@ -32,7 +32,7 @@ gem 'geocoder'
 gem 'gmaps4rails'
 gem 'clearance'
 gem "codeclimate-test-reporter", group: :test, require: nil
-
+gem 'sunspot_rails'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
