@@ -24,13 +24,6 @@
     <%= yield %>
   </body>
 
-  <%= form_tag(philosophers_path, :method => "get", id: "search-form") do %>
-    <%= text_field_tag :search, params[:search], placeholder: "Search Philosophers" %>
-    <div class="waves-effect waves-light btn">
-    <%= submit_tag "Search", :name => nil %>
-<% end %>
-    </div>
-
   <% if signed_in? %>
       Signed in as: <%= current_user.email %>
     <div class="waves-effect waves-light btn">
